@@ -1,6 +1,6 @@
 {
   "name": "@go-mailer/go-mailer",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "index.js",
   "repository": "git@github.com:go-mailer-ltd/package.git",
   "author": "Nathan Oguntuberu <nateoguns.work@gmail.com>",
