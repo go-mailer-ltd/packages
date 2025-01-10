@@ -20,4 +20,4 @@ class Client {
   }
 }
 
-export const GMClient = Object.freeze(new Client());
+module.exports = { GMClient: Object.freeze(new Client()) };
