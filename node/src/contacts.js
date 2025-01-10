@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-export class Contact {
+class Contact {
   base_url = "https://users.go-mailer.com";
 
   constructor(api_key) {
@@ -19,3 +19,5 @@ export class Contact {
     return response;
   }
 }
+
+module.exports = { Contact };

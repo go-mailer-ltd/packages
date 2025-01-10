@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-export class Automation {
+class Automation {
   base_url = "https://automata.go-mailer.com";
 
   constructor(api_key) {
@@ -20,3 +20,5 @@ export class Automation {
     return response;
   }
 }
+
+module.exports = { Automation };
