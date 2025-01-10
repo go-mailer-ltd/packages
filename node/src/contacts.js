@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 export class Contact {
   base_url = "https://users.go-mailer.com";

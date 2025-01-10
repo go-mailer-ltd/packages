@@ -1,6 +1,6 @@
-import { Contact } from "./contacts";
-import { Automation } from "./automation";
-import { Mailing } from "./mailing";
+const { Contact } = require("./contacts");
+const { Automation } = require("./automation");
+const { Mailing } = require("./mailing");
 
 class Client {
   automation() {

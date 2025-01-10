@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 export class Automation {
   base_url = "https://automata.go-mailer.com";
