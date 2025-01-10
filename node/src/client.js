@@ -2,11 +2,7 @@ import { Contact } from "./contacts";
 import { Automation } from "./automation";
 import { Mailing } from "./mailing";
 
-export class Client {
-  constructor(api_key) {
-    this.api_key = api_key;
-  }
-
+class Client {
   automation() {
     return new Automation(this.api_key);
   }
@@ -18,4 +14,10 @@ export class Client {
   mailing() {
     return new Mailing(this.api_key);
   }
+
+  setAPIKey(api_key) {
+    this.api_key = api_key;
+  }
 }
+
+export const GMClient = Object.freeze(new Client());
