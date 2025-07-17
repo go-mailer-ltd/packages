@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gomailer",
-    version="1.0.3",
+    version="2.0.0",
     packages=find_packages(),
     author="Go-Mailer Limited",
     author_email="info@go-mailer.com",
