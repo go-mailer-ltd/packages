@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 class Automation {
-  base_url = "https://automata.go-mailer.com";
+  base_url = "https://api.go-mailer.com";
 
   constructor(api_key) {
     this.api_key = api_key;
@@ -13,7 +13,7 @@ class Automation {
     if (!Object.keys(context).length) throw new Error("Context is required. Please provide relevant context data.");
 
     const body = { event_code, contact_email: user_email, context };
-    const { data: response } = await axios.post(`${this.base_url}/api/v1/events/trigger`, body, {
+    const { data: response } = await axios.post(`${this.base_url}/v1/automations`, body, {
       headers: { Authorization: `Bearer ${this.api_key}` },
     });
 

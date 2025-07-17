@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 class Mailing {
-  base_url = "https://mailing.go-mailer.com";
+  base_url = "https://api.go-mailer.com";
 
   constructor(api_key) {
     this.api_key = api_key;
@@ -19,7 +19,7 @@ class Mailing {
     if (!recipient_email) throw new Error("Recipient email is required.");
 
     const body = { template_code, recipient_email, data, html: html_markup, bcc, attachments };
-    const { data: response } = await axios.post(`${this.base_url}/api/v1/transactionals/dispatch`, body, {
+    const { data: response } = await axios.post(`${this.base_url}/v1/transactionals`, body, {
       headers: { Authorization: `Bearer ${this.api_key}` },
     });
 

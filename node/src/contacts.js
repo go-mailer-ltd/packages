@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 class Contact {
-  base_url = "https://users.go-mailer.com";
+  base_url = "https://api.go-mailer.com";
 
   constructor(api_key) {
     this.api_key = api_key;
@@ -12,7 +12,7 @@ class Contact {
     if (!Object.keys(data).length) throw new Error("User data is empty.");
 
     const body = { ...data, email };
-    const { data: response } = await axios.post(`${this.base_url}/api/contacts`, body, {
+    const { data: response } = await axios.post(`${this.base_url}/v1/contacts`, body, {
       headers: { Authorization: `Bearer ${this.api_key}` },
     });
 
