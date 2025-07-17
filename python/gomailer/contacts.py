@@ -2,7 +2,7 @@ import requests
 
 
 class Contacts:
-    base_url = 'https://users.go-mailer.com'
+    base_url = 'https://api.go-mailer.com'
 
     def __init__(self, api_key):
         self.api_key = api_key
@@ -18,5 +18,5 @@ class Contacts:
         headers = {'Authorization': f'Bearer {self.api_key}'}
 
         response = requests.post(
-            f'{self.base_url}/api/contacts', json=body, headers=headers)
+            f'{self.base_url}/v1/contacts', json=body, headers=headers)
         return response
